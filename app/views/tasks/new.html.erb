@@ -3,9 +3,11 @@
 <%= form_with(model: @task, local: true) do |f| %>
   <%= f.label :content, 'メッセージ' %>
   <%= f.text_field :content %>
+  
+  <%= f.label :status, 'ステータス' %>
+  <%= f.text_field :status %>
 
   <%= f.submit '投稿' %>
 <% end %>
 
 <%= link_to '一覧に戻る', tasks_path %>   
-#createアクション＝メッセージ新規作成の失敗時に適用
